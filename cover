@@ -1,0 +1,7 @@
+update Cargo.lock in git-series for OpenSSL 1.1.1
+
+Right now, git-series can only be built with OpenSSL up to 1.1.0.
+This patch series updates the Cargo.lock to add checksums which
+recent Cargo versions expect (and nixpkgs uses for offline builds)
+and then minimally updates the dependencies so that a newer
+openssl-sys crate is used.
